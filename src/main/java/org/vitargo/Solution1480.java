@@ -27,7 +27,12 @@ public class Solution1480 {
         1 <= nums.length <= 1000
         -10^6 <= nums[i] <= 10^6
      */
-    public int[] runningSum(int[] nums) {
+
+    /*
+     * Time Complexity O(n2)
+     * Space Complexity 0(1)
+     */
+    public int[] myFirstSolRunningSum(int[] nums) {
         int[] sumNums = new int[nums.length];
         sumNums[0] = nums[0];
         for (int i = 1; i < nums.length; i++){
@@ -39,4 +44,30 @@ public class Solution1480 {
         }
         return sumNums;
     }
+
+    /*
+     * Time Complexity O(n)
+     * Space Complexity 0(1)
+     */
+
+    public int[] betterSol1RunningSum(int[] nums) {
+        int[] sumNums = new int[nums.length];
+        sumNums[0] = nums[0];
+        for (int i = 1; i < nums.length; i++){
+            sumNums[i] = nums[i] + sumNums[i-1];
+        }
+        return sumNums;
+    }
+    /*
+     * Time Complexity O(n)
+     * Space Complexity O(1)
+     */
+
+    public int[] betterSol2RunningSum(int[] nums) {
+        for (int i = 1; i < nums.length; i++){
+            nums[i] += nums[i-1];
+        }
+        return nums;
+    }
 }
+
