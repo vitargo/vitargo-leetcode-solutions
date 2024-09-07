@@ -9,3 +9,5 @@
 [412. Fizz Buzz](https://leetcode.com/problems/fizz-buzz/description/)
 
 [876. Middle of the Linked List](https://leetcode.com/problems/middle-of-the-linked-list/description/)
+
+[383. Ransom Note](https://leetcode.com/problems/ransom-note/description/)
